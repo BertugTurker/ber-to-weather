@@ -7,7 +7,6 @@ function State() {
     
      useEffect(()=>{
       if (country === "usa" && statesapi.length<1) {
-        console.log("çalıştı");
         const options = {
           method: 'GET',
           headers: {
@@ -22,7 +21,7 @@ function State() {
           .catch(err => console.error(err))
       }
      },[country, statesapi.length])
-     
+
   return (
   <div>
       {
@@ -32,7 +31,7 @@ function State() {
           <option hidden defaultValue={true}>Select one...</option>
           {
           statesapi.map((e, i) => 
-          <option key={i} value={e.value}>{e.value} {JSON.stringify(e.key)}</option>
+          <option key={i} value={e.value}>{e.value}</option>
           )
           }
       </select>
