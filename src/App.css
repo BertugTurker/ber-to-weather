@@ -1,8 +1,26 @@
 .App {
   text-align: center;
+  margin-top: 6%;
+}
+
+.selectMenu {
+  height: 25px;
 }
 
 .flex {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+.icons {
+  height: 50px;
+  width: 50px;
+}
+
+.gap {
+  gap: 1rem;
+}
+
+.marg {
+  margin-right: 2px;
 }

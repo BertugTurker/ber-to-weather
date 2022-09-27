@@ -3,7 +3,6 @@ import React, {useEffect, useState} from "react";
 
 function Rapor() {
     const {country, state, city} = useCountry()
-    const [apiData, setapiData] = useState({})
     const [tendays, setTendays] = useState([])
 
     useEffect(()=> {
@@ -12,32 +11,34 @@ function Rapor() {
 
     useEffect(()=> {
         if(city !== "" || state !== "") {
-            fetch(`https://api.weatherbit.io/v2.0/forecast/daily?city=${city ? `${city},tr` : `${state},us`}&key=a21edf4d85ef4d3c98254dce2c0e5ad5&days=7`)
+            fetch(`https://api.weatherbit.io/v2.0/forecast/daily?city=${city ? `${city},tr` : `${state},us&units=I`}&key=a21edf4d85ef4d3c98254dce2c0e5ad5&days=7`)
             .then(response => response.json())
-            .then(response => {
-                setapiData(response)
-                setTendays(response.data)
-            })
+            .then(response => setTendays(response.data))
             .catch(err => console.error(err));
         }
     }, [ city, state])
+
     if(state.length > 0 || city.length > 0){
         console.log(tendays)
     };
   return (
-    <div className="flex">
-        <h1>Rapor</h1>
-        <h2>{country}{city || state ? apiData.country_code : null}</h2>
-        <p>{country === "usa" ? state : city}</p>
+    <div>
+        <h2>{country}</h2>
+        <h4>{country === "USA" ? state : city}</h4>
+        <div className="flex gap">
         { tendays.length > 0 ? tendays.map((e,i) => 
             <div key={i}>
-                <h3>{`date: ${e.valid_date.slice(6)}`}</h3>
-                <div>{Math.round(e.max_temp)}C</div>
-                <div>{Math.round(e.min_temp)}C</div>
+                <div>{((new Date(e.valid_date)).toDateString()).slice(0,10)}</div>
+                <img className="icons" src={`https://www.weatherbit.io/static/img/icons/${e.weather.icon}.png`} alt=""/>
                 <div>{e.weather.description}</div>
+                <div className="flex">
+                    <div><strong>{Math.round(e.max_temp)}{city ? "°C": "°F"}</strong></div>/
+                    <div>{Math.round(e.min_temp)}{city ? "°C": "°F"}</div>
+                </div>
             </div>
         ) : null
         }
+        </div>
     </div>
   )
 }

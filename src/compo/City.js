@@ -15,8 +15,8 @@ function City() {
   return (
     <div>
       {
-      country === "turkey" &&
-      <select
+      country === "Turkey" &&
+      <select className='selectMenu'
         value={city} onChange={(e)=> setCity(e.target.value)}>
           <option hidden defaultValue={true}>Select one...</option>
           {

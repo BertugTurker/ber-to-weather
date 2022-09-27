@@ -6,7 +6,7 @@ function State() {
      const [statesapi, setStatesapi] = useState([])
     
      useEffect(()=>{
-      if (country === "usa" && statesapi.length<1) {
+      if (country === "USA" && statesapi.length<1) {
         const options = {
           method: 'GET',
           headers: {
@@ -25,8 +25,8 @@ function State() {
   return (
   <div>
       {
-      country === "usa" &&
-      <select
+      country === "USA" &&
+      <select className='selectMenu'
         value={state} onChange={(e)=> setState(e.target.value)}>
           <option hidden defaultValue={true}>Select one...</option>
           {

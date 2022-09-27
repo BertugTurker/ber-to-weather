@@ -9,10 +9,13 @@ function App() {
 
   return (
     <div className="App">
+        <h1>ber-to-weather</h1>
         <CountryProvider>
-          <Country />
-          <State />
-          <City />
+          <div className='flex'>
+            <div className='marg' ><Country /></div>
+            <State />
+            <City />
+          </div>
           <Rapor />
         </CountryProvider>
     </div>
