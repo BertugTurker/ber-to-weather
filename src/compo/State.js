@@ -14,10 +14,11 @@ function State() {
             'X-RapidAPI-Host': 'referential.p.rapidapi.com'
           }
         };
-       
+       const eyalet = 
         fetch('https://referential.p.rapidapi.com/v1/state?fields=iso_a2&iso_a2=us&lang=en&limit=250', options)
           .then(response => response.json())
-          .then(response => setStatesapi(response))
+          Promise.all([eyalet])
+          .then(async response => setStatesapi(response[0]))
           .catch(err => console.error(err))
       }
      },[country, statesapi.length])

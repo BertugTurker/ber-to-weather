@@ -6,11 +6,16 @@ function City() {
     const [citiesapi, setCitiesapi] = useState([])
     
     useEffect(()=> {
-        fetch('http://api-sehir.herokuapp.com/api/cities/')
+      if (country === "Turkey" && citiesapi.length<1) {
+        const cityFetch = 
+        fetch('https://api-sehir.herokuapp.com/api/cities/')
         .then(response => response.json())
-        .then(response => setCitiesapi(response))
-        .catch(err => console.error(err));
-    }, [country])
+
+        Promise.all([cityFetch]).then(async response => setCitiesapi(response[0]))
+        .catch(err => console.error(err))
+      }
+      
+    }, [country, citiesapi.length])
     
   return (
     <div>
