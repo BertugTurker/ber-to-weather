@@ -1,10 +1,11 @@
 .App {
   text-align: center;
-  margin-top: 6%;
+  margin-top: 5%;
 }
 
 .selectMenu {
   height: 25px;
+  width: 135px;
 }
 
 .flex {
@@ -23,4 +24,37 @@
 
 .marg {
   margin-right: 2px;
+}
+
+.top {
+  margin-top: 5%;
+}
+
+.align {
+  align-self: center;
+}
+
+a:hover {
+  color: cornflowerblue !important;
+}
+
+a:visited {
+  color: #454545;
+  text-decoration: none;
+  transition: 200ms;
+}
+
+.foot a {
+  color: #454545;
+  font-size: larger;
+}
+
+.cart:hover {
+ box-shadow: 0 0 3px 3px skyblue;
+ border-radius: 2%;
+}
+
+.selected {
+  box-shadow: 0 0 3px 3px skyblue;
+ border-radius: 2%;
 }

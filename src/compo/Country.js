@@ -10,7 +10,7 @@ function Country() {
   return (
     <select className='selectMenu'
       value={country} onChange={visa}>
-        <option hidden defaultValue={true}>Select one...</option>
+        <option hidden defaultValue={true}>Select country...</option>
         {  ulkeler.map((e, i) => 
          <option key={i}>{e}</option>
      )}

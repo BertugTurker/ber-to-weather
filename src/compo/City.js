@@ -18,7 +18,7 @@ function City() {
       country === "Turkey" &&
       <select className='selectMenu'
         value={city} onChange={(e)=> setCity(e.target.value)}>
-          <option hidden defaultValue={true}>Select one...</option>
+          <option hidden defaultValue={true}>Select city...</option>
           {
           citiesapi.map((e, i) => 
           <option key={i}>{e["Sehir-Bilgileri"].sehir}</option>

@@ -18,16 +18,15 @@ function Rapor() {
         }
     }, [ city, state])
 
-    if(state.length > 0 || city.length > 0){
-        console.log(tendays)
-    };
   return (
     <div>
-        <h2>{country}</h2>
+        <h2 className="flex gap">{country}</h2>
+        { country === "USA" && <img className="icons" src="/flags/usa.png" alt=""/>}
+        { country === "Turkey" && <img className="icons" src="/flags/turkey.png" alt=""/>}
         <h4>{country === "USA" ? state : city}</h4>
         <div className="flex gap">
         { tendays.length > 0 ? tendays.map((e,i) => 
-            <div key={i}>
+            <div className="cart" key={i}>
                 <div>{((new Date(e.valid_date)).toDateString()).slice(0,10)}</div>
                 <img className="icons" src={`https://www.weatherbit.io/static/img/icons/${e.weather.icon}.png`} alt=""/>
                 <div>{e.weather.description}</div>

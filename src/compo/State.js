@@ -28,7 +28,7 @@ function State() {
       country === "USA" &&
       <select className='selectMenu'
         value={state} onChange={(e)=> setState(e.target.value)}>
-          <option hidden defaultValue={true}>Select one...</option>
+          <option hidden defaultValue={true}>Select state...</option>
           {
           statesapi.map((e, i) => 
           <option key={i} value={e.value}>{e.value}</option>

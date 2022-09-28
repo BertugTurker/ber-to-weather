@@ -4,6 +4,7 @@ import Country from "./compo/Country";
 import State from "./compo/State";
 import City from "./compo/City";
 import Rapor from './compo/Rapor';
+import Footer from './compo/Footer';
 
 function App() {
 
@@ -12,12 +13,15 @@ function App() {
         <h1>ber-to-weather</h1>
         <CountryProvider>
           <div className='flex'>
-            <div className='marg' ><Country /></div>
+            <div className='marg' >
+              <Country />
+            </div>
             <State />
             <City />
           </div>
           <Rapor />
         </CountryProvider>
+        <Footer/>
     </div>
   );
 }
