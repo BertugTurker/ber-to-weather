@@ -1,21 +1,9 @@
-import React, { useEffect, useState } from "react";
 import { useCountry } from "../context/Country";
 
 function City() {
     const {country, city, setCity} = useCountry();
-    const [citiesapi, setCitiesapi] = useState([])
     
-    useEffect(()=> {
-      if (country === "Turkey" && citiesapi.length<1) {
-        const cityFetch = 
-        fetch('https://api-sehir.herokuapp.com/api/cities/')
-        .then(response => response.json())
-
-        Promise.all([cityFetch]).then(async response => setCitiesapi(response[0]))
-        .catch(err => console.error(err))
-      }
-      
-    }, [country, citiesapi.length])
+    const sehirler = ["Adana", "Adıyaman", "Afyon", "Ağrı", "Amasya", "Ankara", "Antalya", "Artvin", "Aydın", "Balıkesir", "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", "Çorum", "Denizli", "Diyarbakır", "Edirne", "Elazığ", "Erzincan", "Erzurum", "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane", "Hakkari", "Hatay", "Isparta", "İçel (Mersin)", "İstanbul", "İzmir", "Kars", "Kastamonu", "Kayseri", "Kırklareli", "Kırşehir", "Kocaeli", "Konya", "Kütahya", "Malatya", "Manisa", "Kahramanmaraş", "Mardin", "Muğla", "Muş", "Nevşehir", "Niğde", "Ordu", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "Tekirdağ", "Tokat", "Trabzon", "Tunceli", "Şanlıurfa", "Uşak", "Van", "Yozgat", "Zonguldak", "Aksaray", "Bayburt", "Karaman", "Kırıkkale", "Batman", "Şırnak", "Bartın", "Ardahan", "Iğdır", "Yalova", "Karabük", "Kilis", "Osmaniye", "Düzce"] ;
     
   return (
     <div>
@@ -25,8 +13,8 @@ function City() {
         value={city} onChange={(e)=> setCity(e.target.value)}>
           <option hidden defaultValue={true}>Select city...</option>
           {
-          citiesapi.map((e, i) => 
-          <option key={i}>{e["Sehir-Bilgileri"].sehir}</option>
+          sehirler.map((e, i) => 
+          <option key={i}>{e}</option>
           )
           }
       </select>
@@ -35,4 +23,4 @@ function City() {
   )
 }
 
-export default React.memo(City)
+export default City

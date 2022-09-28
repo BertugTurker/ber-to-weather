@@ -21,7 +21,7 @@ function State() {
           .then(async response => setStatesapi(response[0]))
           .catch(err => console.error(err))
       }
-     },[country, statesapi.length])
+     }, [country, statesapi.length])
 
   return (
   <div>
