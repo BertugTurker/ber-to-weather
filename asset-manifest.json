@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/ber-to-weather/static/css/main.495467a3.css",
-    "main.js": "/ber-to-weather/static/js/main.ae484402.js",
+    "main.js": "/ber-to-weather/static/js/main.b4dc9d39.js",
+    "static/media/turk.png": "/ber-to-weather/static/media/turk.ec9bf101090bd59b8fec.png",
+    "static/media/usa.png": "/ber-to-weather/static/media/usa.a39dc931a0541dd8a5c1.png",
     "index.html": "/ber-to-weather/index.html",
     "main.495467a3.css.map": "/ber-to-weather/static/css/main.495467a3.css.map",
-    "main.ae484402.js.map": "/ber-to-weather/static/js/main.ae484402.js.map"
+    "main.b4dc9d39.js.map": "/ber-to-weather/static/js/main.b4dc9d39.js.map"
   },
   "entrypoints": [
     "static/css/main.495467a3.css",
-    "static/js/main.ae484402.js"
+    "static/js/main.b4dc9d39.js"
   ]
 }
