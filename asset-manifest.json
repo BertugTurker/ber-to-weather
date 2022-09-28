@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ber-to-weather/static/css/main.495467a3.css",
+    "main.js": "/ber-to-weather/static/js/main.26645c74.js",
+    "index.html": "/ber-to-weather/index.html",
+    "main.495467a3.css.map": "/ber-to-weather/static/css/main.495467a3.css.map",
+    "main.26645c74.js.map": "/ber-to-weather/static/js/main.26645c74.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.495467a3.css",
+    "static/js/main.26645c74.js"
+  ]
+}
