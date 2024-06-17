@@ -8,7 +8,7 @@ function Footer() {
       <a href="https://github.com/BertugTurker" target="_blank" rel="noopener noreferrer" title="Link to author's GitHub profile">
         <i className="fa-brands fa-github"></i>
       </a>
-      <a href="https://www.linkedin.com/in/bertug-turker" target="_blank" rel="noopener noreferrer" title="Link to author's LinkdIn profile">
+      <a href="https://linkedin.com/in/bertug-turker" target="_blank" rel="noopener noreferrer" title="Link to author's LinkdIn profile">
         <i className="fa-brands fa-linkedin"></i>
       </a>
       <a href="https://twitter.com/BertugTurker" target="_blank" rel="noopener noreferrer" title="Link to author's Twitter profile">
